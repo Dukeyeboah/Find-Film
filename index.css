@@ -1,0 +1,272 @@
+*{
+  box-sizing:border-box;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  background-color: #0D0D0D;
+  font-family: 'Inter', sans-serif;
+  color:azure;
+}
+
+/*header section  */
+
+html, body,
+.search,
+.search input,
+.plot{
+    width:100%
+}
+
+html, body, header{
+  margin:0;
+  padding:0;  
+}
+
+header{
+  /* background-color: aqua; */
+  background-image: url("movie-header.png"); 
+  background-size: cover;
+  height: 200px;
+  align-items: center;
+  justify-content: space-around;
+}
+
+header,
+#switch-view-btn,
+.search .fa-search,
+.watchlist p{
+    color:white;
+}
+
+#switch-view-btn{
+    font-weight: 700;
+    font-size: 0.875rem;
+    margin-top: 5px;
+    background: none;
+}
+
+header h1{
+  font-weight: 800;
+  font-size: 2.625rem;
+  text-shadow: 0 2px 3px grey;
+} 
+
+
+/*Main section  */
+/* search button */
+.container,
+.search{
+    margin:0 auto 0 auto;
+}
+
+.container{
+  width:70vw;
+  justify-content: center;
+}
+
+ .search{
+   position:relative;
+   top:0;
+ }
+
+ .add-btn,
+ .search button,
+ .search input,
+ #switch-view-btn{
+     border:none;  
+ }
+
+ .search input{
+  height: 100%;
+  text-indent: 22px;
+  background-color: slategrey;
+ }
+
+ .search input:focus{
+  box-shadow: 0 1px 4px whitesmoke;
+  background-color: black;
+  outline:none;
+  color:whitesmoke;
+ }
+
+ .search .fa-search{
+  position: absolute;
+  top: 9px;
+  left: 10px;
+ }
+
+.btn{
+    background: lightslategray;  
+}
+
+.btn:hover,
+.btn:focus,
+.btn:active{
+    background:black;
+    color:whitesmoke;
+}
+
+ .search button{
+  padding: 0.45em;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  height: 100%;
+  width: 70px;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.9rem;
+  outline: none;
+  box-shadow: 0 -4px 6px darkslategrey inset;
+  text-shadow: 0 1px 6px black;
+ }
+
+ /* movie search results section */
+ .result-display{
+     max-width:80vw;
+     height: 200px;
+     margin: 40px auto 60px auto;
+     flex-direction: column; 
+     align-items: center;
+ }
+ 
+ header,
+ .container,
+ .result-display,
+ .movie-data,
+ .info,
+ .name-rating,
+ .additional-info,
+ .watchlist {
+     display: flex;  
+ }
+ 
+ .movie-data{    
+     gap:25px;
+     padding:5px; 
+     max-width:500px; 
+ }
+ 
+ .info{   
+     flex-direction: column; 
+     padding:12px 6px 8px 6px;
+ }
+ 
+ .poster{
+     width:120px;
+     height:180px;
+ }
+ 
+ .name-rating{
+    align-items: baseline;
+    gap:8px;
+}
+
+.name-rating p,
+.additional-info,
+.plot{
+    font-size:0.75rem;
+}
+ 
+ .additional-info{
+     gap: 12px;
+     justify-content: space-between;
+     align-items: baseline;
+ }
+ 
+ .watchlist .fa-solid,
+ .add-btn{
+     color:black;
+ }
+ 
+ .watchlist .fa-solid{
+     background-color:white;
+     padding:2px 3px;
+     border-radius: 50%;
+ }
+ 
+ .info h3{
+     font-size:1.2rem;
+ }
+ 
+ .add-btn{
+     background-color: whitesmoke;
+     font-size: 0.8rem;
+     border-radius:50%;
+     font-weight:bold;
+ }
+ 
+ .watchlist{
+     align-items: flex-start;
+     gap:3px;
+ }
+ 
+ .watchlist p{
+     margin-left:2px;
+ }
+ 
+  .watchlist p,
+  .watchlist,
+  .watchlist .fa-solid{
+      cursor:pointer;  
+  }
+ 
+ .watchlist p:hover,
+ .watchlist p:focus,
+ .watchlist p:active{
+     color:lightseagreen;
+ }
+
+.line{
+    margin-bottom: 25px;
+    color:red;
+}
+
+.hidden {
+  display:none;
+}
+
+@media(min-width: 800px){
+    .result-display{
+        width:65vw;
+    }
+    .movie-data{
+        width: 1500px;
+    } 
+    #search-region{
+        display:flex;
+        margin:0 auto;
+        width: 50vw; 
+    } 
+}
+
+/* for smaller screens */
+@media(max-width: 568px) and (min-width:320px){
+    .movie-data{
+        width: 100%;
+    }
+    .result-display{
+        max-width:90vw;
+    }  
+    header h1{
+        font-weight: 800;
+        font-size: 1.75rem;
+        text-shadow: 0 2px 3px grey;
+    } 
+    #switch-view-btn{
+        font-weight: 700;
+        font-size: 0.75rem;
+        margin-top: 5px;
+        background: none;
+    }
+    .name-rating p,
+    .additional-info,
+    .plot{
+        font-size:0.55rem;
+    }
+    .search button{
+        font-size:0.75rem;
+    }
+}
+
